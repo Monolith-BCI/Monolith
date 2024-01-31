@@ -1,16 +1,36 @@
 ---
-
+// Frontmatter script space
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html>
+<head>
+    <title>Monolith MMI</title>
+    <style>
+        /* Example styles for the divs */
+        .header, .content, .footer {
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #fde4cf; /* Light orange */
+        }
+        .footer {
+            background-color: #d3f8d3; /* Light green */
+        }
+    </style>
+</head>
+<body>
+    <h1>Monolith MMI</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/trillium">Trillium</a></li>
+        </ul>
+    </nav>
+	<div class="header">Header</div>
+    <div class="content">Content 1</div>
+    <div class="content">Content 2</div>
+    <div class="content">Content 3</div>
+    <div class="footer">Footer</div>
+</body>
 </html>
