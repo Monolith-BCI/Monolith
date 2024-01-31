@@ -5,29 +5,67 @@
 <head>
     <title>Monolith MMI</title>
     <style>
-        /* Example styles for the divs */
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+        
+        body {
+            background-color: #FDF6F4;
+        }
+
+        .header {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            height: 50vh;
+            background-color: #FDF6F4;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
         .header, .content, .footer {
             padding: 20px;
-            margin: 10px 0;
-            background-color: #f0f0f0;
         }
-        .header {
-            background-color: #fde4cf; /* Light orange */
-        }
+
         .footer {
-            background-color: #d3f8d3; /* Light green */
+            background-color: #d3f8d3;
+        }
+
+        h1 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 62.4px;
+            color: #282E43;
+            margin-top: 20px; 
+            margin-bottom: 0px; 
+        }
+
+        h2 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700; /* Bold */
+            font-size: 32px;
+            line-height: 40px;
+            color: #282E43;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 250px;
+            height: 275px;
+        }
+        
+        /* You can remove the margins from .header, .content, .footer if you don't want them to affect all elements */
+        .header, .content, .footer {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Monolith MMI</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/trillium">Trillium</a></li>
-        </ul>
-    </nav>
-	<div class="header">Header</div>
+    <div class="header">
+        <img src="/Monolith.png" alt="Monolith">
+        <h1>MONOLITH</h1>
+        <h2>MIND-MACHINE INTERFACES</h2>
+    </div>
     <div class="content">Content 1</div>
     <div class="content">Content 2</div>
     <div class="content">Content 3</div>
