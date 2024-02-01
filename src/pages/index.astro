@@ -1,74 +1,188 @@
 ---
-// Frontmatter script space
+import Monolith from "../../public/Monolith.png";
+import { Picture } from "astro:assets";
+import Trillium from "../components/trillium.astro";
+import Flux from "../components/flux.astro";
+---
+
 ---
 <html>
-<head>
+  <head>
     <title>Monolith MMI</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
-        
-        body {
-            background-color: #FDF6F4;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700;700i&display=swap");
 
-        .header {
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center;
-            height: 50vh;
-            background-color: #FDF6F4;
-            font-family: 'IBM Plex Mono', monospace;
-        }
+      p {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700;
+        font-size: 19px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .main {
+        max-width: 600px;
+      }
+      body {
+        background-color: #fdf6f4;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .header,
+      .content {
+        padding: 20px;
+      }
 
-        .header, .content, .footer {
-            padding: 20px;
-        }
+      .footer {
+        background-color: #d3f8d3;
+      }
+      .italic {
+        font-style: italic;
+      }
 
-        .footer {
-            background-color: #d3f8d3;
-        }
+      h1 {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 62.4px;
+        color: #282e43;
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
 
-        h1 {
-            font-family: 'IBM Plex Mono', monospace;
-            font-weight: 700;
-            font-size: 48px;
-            line-height: 62.4px;
-            color: #282E43;
-            margin-top: 20px; 
-            margin-bottom: 0px; 
-        }
+      h2 {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700; /* Bold */
+        font-size: 32px;
+        line-height: 40px;
+        color: #282e43;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
 
-        h2 {
-            font-family: 'IBM Plex Mono', monospace;
-            font-weight: 700; /* Bold */
-            font-size: 32px;
-            line-height: 40px;
-            color: #282E43;
-            margin-top: 0px;
-            margin-bottom: 10px;
-        }
+      img {
+        width: 250px;
+        height: 275px;
+      }
+      .header,
+      .content,
+      .footer {
+        margin: 0;
+      }
+      .bold-text {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700; /* Bold */
+      }
 
-        img {
-            width: 250px;
-            height: 275px;
-        }
-        
-        /* You can remove the margins from .header, .content, .footer if you don't want them to affect all elements */
-        .header, .content, .footer {
-            margin: 0;
-        }
+      .bold-italic-text {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700; /* Bold */
+        font-style: italic; /* Italic */
+        margin-bottom: 40px;
+        margin-top:40px;
+      }
+      .footer {
+        width: 100%; /* Ensures footer spans the whole width */
+      }
+
+      .top-div,
+      .bottom-div {
+        width: 100%; /* Each div stretches across the whole page */
+        display: flex; /* Uses flexbox to manage bars */
+        flex-direction: column;
+      }
+
+      .bar {
+        height: 15px; /* Since the top div is 60px and there are 4 bars, each bar is 15px high */
+        flex-grow: 1; /* Each bar will grow equally to fill the div */
+      }
+
+      .top-div {
+        height: 60px; /* Height of top div */
+      }
+
+      .bottom-div {
+        height: 80px; /* Height of bottom div */
+        background-color: #535971; /* Example color for the bottom div */
+      }
+      .product {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        background-color: #fdf6f4;
+        font-family: "IBM Plex Mono", monospace;
+        margin-bottom: 50px;
+      }
     </style>
-</head>
-<body>
-    <div class="header">
-        <img src="/Monolith.png" alt="Monolith">
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <Picture src={Monolith} alt="Description of the image" />
         <h1>MONOLITH</h1>
         <h2>MIND-MACHINE INTERFACES</h2>
+      </div>
+      <div>
+        <h2 class="bold-italic-text">[why?]</h2>
+        <p>
+          The mind is the final frontier of human exploration. We're building
+          telescopes for the next Galileo.
+        </p>
+        <p>
+          We've been working on building the most affordable and refined devices
+          to connect minds and machines.
+        </p>
+      </div>
+      <div>
+        <h2 class="bold-italic-text">[creations]</h2>
+        <div class="product">
+          <div style="display: flex; flex-direction: column;">
+            <h2 class="bold-italic-text">Trillium</h2>
+            <p>
+              8 channel EEG
+              <br />
+              coming soon
+            </p>
+          </div>
+          <div>
+            <Trillium />
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div style="display: flex; flex-direction: column;">
+          <h2 class="bold-italic-text">FLUX</h2>
+          <p>
+            EEG signal database
+            <br />
+            coming soon
+          </p>
+        </div>
+        <div>
+          <Flux />
+        </div>
+      </div>
+      <div>
+        <h2 class="bold-italic-text">[team]</h2>
+        <p>We're 5 people: Henry, Cheru, Sophia, JC, and Nila.</p>
+      </div>
     </div>
-    <div class="content">Content 1</div>
-    <div class="content">Content 2</div>
-    <div class="content">Content 3</div>
-    <div class="footer">Footer</div>
-</body>
+  </body>
+  <div class="footer">
+    <div class="top-div">
+      <div class="bar" style="background-color: #DFDDE0"></div>
+      <div class="bar" style="background-color: #C4C3CA"></div>
+      <div class="bar" style="background-color: #8A8E9F"></div>
+      <div class="bar" style="background-color: #6F7489;"></div>
+    </div>
+    <div class="bottom-div"></div>
+  </div>
 </html>
