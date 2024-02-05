@@ -14,9 +14,10 @@ import Flux from "../components/flux.astro";
       p {
         font-family: "IBM Plex Mono", monospace;
         font-weight: 700;
-        font-size: 19px;
+        font-size: 18px;
         margin-top: 30px;
         margin-bottom: 30px;
+        color: #282e43;
       }
       .main {
         max-width: 600px;
@@ -61,8 +62,8 @@ import Flux from "../components/flux.astro";
       }
 
       img {
-        width: 250px;
-        height: 275px;
+        width: 179px;
+        height: 200px;
       }
       .header,
       .content,
@@ -73,13 +74,25 @@ import Flux from "../components/flux.astro";
         font-family: "IBM Plex Mono", monospace;
         font-weight: 700; /* Bold */
       }
-
       .bold-italic-text {
         font-family: "IBM Plex Mono", monospace;
         font-weight: 700; /* Bold */
         font-style: italic; /* Italic */
         margin-bottom: 40px;
-        margin-top:40px;
+        margin-top: 40px;
+      }
+      .product-name {
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .subtext {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700; /* Bold */
+        font-size: 16px;
+        line-height: 24px;
+        color: #282e43;
+        margin-top: 0px;
+        margin-bottom: 0px;
       }
       .footer {
         width: 100%; /* Ensures footer spans the whole width */
@@ -129,7 +142,7 @@ import Flux from "../components/flux.astro";
         <h1>MONOLITH</h1>
         <h2>MIND-MACHINE INTERFACES</h2>
       </div>
-      <div>
+      <div style="margin-bottom: 80px;">
         <h2 class="bold-italic-text">[why?]</h2>
         <p>
           The mind is the final frontier of human exploration. We're building
@@ -140,36 +153,38 @@ import Flux from "../components/flux.astro";
           to connect minds and machines.
         </p>
       </div>
-      <div>
-        <h2 class="bold-italic-text">[creations]</h2>
+      <div style="margin-bottom: 60px;">
+        <div>
+          <h2 class="bold-italic-text">[creations]</h2>
+          <div class="product" style="margin-bottom: 20px;">
+            <div style="display: flex; flex-direction: column;">
+              <h2 class="bold-italic-text product-name">Trillium</h2>
+              <p class="subtext">
+                8 channel EEG
+                <br />
+                coming soon
+              </p>
+            </div>
+            <div>
+              <Trillium />
+            </div>
+          </div>
+        </div>
         <div class="product">
           <div style="display: flex; flex-direction: column;">
-            <h2 class="bold-italic-text">Trillium</h2>
-            <p>
-              8 channel EEG
+            <h2 class="bold-italic-text product-name">FLUX</h2>
+            <p class="subtext">
+              EEG signal database
               <br />
               coming soon
             </p>
           </div>
           <div>
-            <Trillium />
+            <Flux />
           </div>
         </div>
       </div>
-      <div class="product">
-        <div style="display: flex; flex-direction: column;">
-          <h2 class="bold-italic-text">FLUX</h2>
-          <p>
-            EEG signal database
-            <br />
-            coming soon
-          </p>
-        </div>
-        <div>
-          <Flux />
-        </div>
-      </div>
-      <div>
+      <div style="margin-bottom: 60px;">
         <h2 class="bold-italic-text">[team]</h2>
         <p>We're 5 people: Henry, Cheru, Sophia, JC, and Nila.</p>
       </div>
