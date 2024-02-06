@@ -1,5 +1,4 @@
 export default {
-    // ...
-    base: '/Monolith-MMI/',
-  };
-  
+  // ...
+  base: "/Monolith/",
+};
