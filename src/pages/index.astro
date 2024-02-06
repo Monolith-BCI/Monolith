@@ -2,23 +2,16 @@
 import Monolith from "../resources/Monolith.png";
 import { Picture } from "astro:assets";
 import Trillium from "../components/trillium.astro";
-import Flux from "../components/flux.astro";
+import Flux from '../components/flux.astro';
 ---
 
 <html>
   <head>
     <title>Monolith MMI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700;700i&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-      p {
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 700;
-        font-size: 18px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        color: #282e43;
-      }
       .main {
         max-width: 600px;
       }
@@ -28,6 +21,14 @@ import Flux from "../components/flux.astro";
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      p {
+        font-weight: 700;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: "IBM Plex Mono", monospace;
+        color: #282e43;
       }
       .header,
       .content {
@@ -53,7 +54,7 @@ import Flux from "../components/flux.astro";
 
       h2 {
         font-family: "IBM Plex Mono", monospace;
-        font-weight: 700; /* Bold */
+        font-weight: 500; /* Bold */
         font-size: 32px;
         line-height: 40px;
         color: #282e43;
@@ -128,10 +129,15 @@ import Flux from "../components/flux.astro";
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 50vh;
+        height: 40vh;
         background-color: #fdf6f4;
         font-family: "IBM Plex Mono", monospace;
         margin-bottom: 50px;
+      }
+      @media (max-width: 600px) {
+        .header {
+          height: 25vh;
+        }
       }
     </style>
   </head>
